@@ -31,10 +31,13 @@ button:hover{
   cursor: pointer;
 }
 svg{
-  height: 50px;
+  height: 30px;
 }
 svg g path{
   fill: rgb(44, 62, 80);
+}
+a:hover{
+  cursor: pointer;
 }
 *:before,
 *:after {
