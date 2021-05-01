@@ -36,6 +36,10 @@ svg{
 svg g path{
   fill: rgb(44, 62, 80);
 }
+ul{
+  padding: 0;
+  list-style-type: none;
+}
 a:hover{
   cursor: pointer;
 }
@@ -45,5 +49,10 @@ a:hover{
 }
 *:focus {
   outline: none;
+}
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
 }
 </style>

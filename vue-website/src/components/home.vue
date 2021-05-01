@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div id="about-me" class="page">
       <div class="full-height large-width left center-vertically">
-        <div id="title" class="bold title full-width margin-left">Hi, I'm Axelle Jamous, a Software Developer</div>
+        <div id="title" class="bold title margin-left">Hi, I'm Axelle Jamous, a Software Developer</div>
         <button id="email-button" class="margin-left" @click="mailToMe()">Email me</button>
         <div>
           <a id="svg-github" href="https://github.com/axellejamous" target="_blank">
@@ -42,12 +42,33 @@
           </a>
         </div>
       </div>
-      <div class="full-height small-width right center-vertically">
+      <div id="codejar-wrapper" class="full-height small-width right center-vertically">
         <codejar />
       </div>
     </div>
-    <div id="contact" class="page">
-      
+    <div id="contact" class="page-half">
+      <div class="full-height larger-width left center-vertically">
+        <div class="info">
+          <div class="medium-title">― My background</div>
+          <div>
+            I thoroughly enjoy the development process from beginning to end, keeping the user's experience front and center. I'm extremely motivated to constantly develop my skills to grow both on a technical and professional level.
+            I enjoy responsibility and strive to always deliver the best approach to what the client wants and needs.
+          </div>
+        </div>
+      </div>
+      <div class="full-height smaller-width right center-vertically">
+        <div class="info">
+          <div class="medium-title">― Skills</div>
+          <ul>
+            <li>Problem solving</li>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Self motivation</li>
+            <li>Decisiveness</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+      </div>
     </div>
     <div class="clear"></div>
   </div>
@@ -67,7 +88,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #about-me{
   background: #F5F7FA;
 }
@@ -104,8 +125,14 @@ export default {
   fill: rgb(44, 62, 80);
 }
 
+.wrapper{
+  width: 100%;
+}
 .page{
   height: 100vh;
+}
+.page-half{
+  height: 50vh;
 }
 .full-height{
   height: 100%;
@@ -122,6 +149,12 @@ export default {
 .small-width{
   width: 40%;
 }
+.larger-width{
+  width: 80%;
+}
+.smaller-width{
+  width: 20%;
+}
 .left{
   float: left;
 }
@@ -135,10 +168,22 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  white-space: break-spaces;
+  /*white-space: break-spaces;*/
 }
 .title{
   font-size: 64px;
+}
+.medium-title{
+  color: rgb(123, 136, 168);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.info{
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
 }
 .light{
   font-weight: 300;
@@ -155,14 +200,22 @@ export default {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  #codejar-wrapper{
+    height: 40%;
+  }
+  #svg-github,#svg-linkedin, #svg-stackoverflow{
+    bottom: 10px;
+  }
+
+  .page-half{
+    height: 100vh;
+  }
   .title{
     font-size: 40px;
   }
-
-  .half-width, .large-width, .small-width{
+  .half-width, .large-width, .small-width, .larger-width, .smaller-width{
     width: 100%;
   }
-
   .full-height{
     height: 50%;
   }
