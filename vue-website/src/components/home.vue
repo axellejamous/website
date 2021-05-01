@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div id="about-me" class="page">
+    <div id="about-me" class="page dark-bg">
       <div class="full-height large-width left center-vertically">
         <div id="title" class="bold title margin-left">Hi, I'm Axelle Jamous, a Software Developer</div>
         <button id="email-button" class="margin-left" @click="mailToMe()">Email me</button>
@@ -70,6 +70,37 @@
         </div>
       </div>
     </div>
+    <div id="cv" class="dark-bg">
+      <div class="full-height center-vertically">
+        <table>
+          <tr>
+            <td class="medium-title smaller-width td-head">― Work experience</td>
+            <td class="larger-width">
+              <div class="td-row-wrapper">
+                <div class="td-title">Software Developer Consultant</div>
+                <div class="td-subtitle">Soluz.io  / Sept 2020 - Present</div>
+                <div>I have been working on the integration of modern ERP systems into the Soluz.io platform as well as end-to-end, fully custom, software applications built on top of the Soluz.io platform.</div>
+              </div>
+              <div class="td-row-wrapper">
+                <div class="td-title">Software Developer / Business Solution Expert</div>
+                <div class="td-subtitle">Arco Information  / May 2019 - Present</div>
+                <div>I’ve been central to delivering two IoT MvP's as well as an end-to-end web application in the online marketplace space, both built on top of Arco Information's existing software platform.</div>
+              </div>
+              <div class="td-row-wrapper">
+                <div class="td-title">Unity, Hardware & Full-Stack Developer</div>
+                <div class="td-subtitle">Soulmade  / Dec 2018 - April 2019</div>
+                <div>While at Soulmade, I helped establish a scrum/agile methodology workflow as well as mentored interns in the Hardware and Software Development space. I was responsible for Backend development in Unity as well as full stack development for web and mobile applications.</div>
+              </div>
+              <div class="td-row-wrapper">
+                <div class="td-title">IoT Development intern</div>
+                <div class="td-subtitle">BASF  / Sept 2018 - Feb 2019</div>
+                <div>I was very lucky to work with an experienced IoT developer and Proximus to help develop a MvP for a large scale project within the BASF 4.0 integration.</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
     <div class="clear"></div>
   </div>
 </template>
@@ -89,9 +120,6 @@ export default {
 </script>
 
 <style>
-#about-me{
-  background: #F5F7FA;
-}
 #about-me #title{
   text-align: left;
 }
@@ -134,6 +162,9 @@ export default {
 .page-half{
   height: 50vh;
 }
+.dark-bg{
+  background: #F5F7FA;
+}
 .full-height{
   height: 100%;
 }
@@ -150,10 +181,10 @@ export default {
   width: 40%;
 }
 .larger-width{
-  width: 80%;
+  width: 65%;
 }
 .smaller-width{
-  width: 20%;
+  width: 35%;
 }
 .left{
   float: left;
@@ -168,7 +199,6 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*white-space: break-spaces;*/
 }
 .title{
   font-size: 64px;
@@ -197,6 +227,24 @@ export default {
 .svg-img{
   height: 50px;
 }
+.td-head{
+  padding-left: 80px;
+}
+table>tr>td{
+  text-align: left;
+}
+.td-title{
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.td-subtitle{
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+.td-row-wrapper{
+  margin-bottom: 40px;
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -205,6 +253,14 @@ export default {
   }
   #svg-github,#svg-linkedin, #svg-stackoverflow{
     bottom: 10px;
+  }
+
+  table{
+    margin-top: 10px;
+  }
+  table>tr>td{
+    padding-left: 20px;
+    float: left;
   }
 
   .page-half{
@@ -218,6 +274,9 @@ export default {
   }
   .full-height{
     height: 50%;
+  }
+  .td-head {
+    padding-left: 20px;
   }
 }
 </style>
