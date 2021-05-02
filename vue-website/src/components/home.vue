@@ -46,7 +46,7 @@
         <codejar />
       </div>
     </div>
-    <div id="contact" class="page-half">
+    <div id="background" class="page-half">
       <div class="full-height larger-width left center-vertically">
         <div class="info">
           <div class="medium-title">― My background</div>
@@ -72,7 +72,7 @@
     </div>
     <div id="cv" class="dark-bg">
       <div class="full-height center-vertically">
-        <table>
+        <table class="cv-table">
           <tr>
             <td class="medium-title smaller-width td-head">― Work experience</td>
             <td class="larger-width">
@@ -89,7 +89,7 @@
               <div class="td-row-wrapper">
                 <div class="td-title">Unity, Hardware & Full-Stack Developer</div>
                 <div class="td-subtitle">Soulmade  / Dec 2018 - April 2019</div>
-                <div>While at Soulmade, I helped establish a scrum/agile methodology workflow as well as mentored interns in the Hardware and Software Development space. I was responsible for Backend development in Unity as well as full stack development for web and mobile applications.</div>
+                <div>While at Soulmade, I helped establish a scrum/agile methodology workflow as well as mentored interns in the hardware development space. I was responsible for backend development in Unity as well as full stack development for web and mobile applications.</div>
               </div>
               <div class="td-row-wrapper">
                 <div class="td-title">IoT Development intern</div>
@@ -97,6 +97,39 @@
                 <div>I was very lucky to work with an experienced IoT developer and Proximus to help develop a MvP for a large scale project within the BASF 4.0 integration.</div>
               </div>
             </td>
+          </tr>
+          <tr>
+            <td class="medium-title smaller-width td-head">― Education</td>
+            <td class="larger-width">
+              <div class="td-row-wrapper">
+                <div class="td-title">AP University College</div>
+                <div class="td-subtitle">Bachelor of Applied Science, Electronics-ICT  / 2017 - 2019</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <a href="../assets/cv.pdf" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
+      </div>
+    </div>
+    <div id="contact" class="page-half light-bg">
+      <div class="full-height small-width left center-vertically">
+        <div class="big-title">Let's get in touch.</div>
+      </div>
+      <div class="full-height large-width right center-vertically-and-horizontally">
+        <table class="contact-table">
+          <tr>
+            <th class="medium-title">― Socials</th>
+            <th class="medium-title">― Contact details</th>
+          </tr>
+          <tr>
+            <td><a href="https://github.com/axellejamous" target="_blank">LinkedIn</a></td>
+            <td><a href="javascript:void(0);" @click="mailToMe()">Email</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://www.linkedin.com/in/axelle-jamous/" target="_blank">GitHub</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://stackoverflow.com/users/1780110/axelle?tab=profile" target="_blank">Stackoverflow</a></td>
           </tr>
         </table>
       </div>
@@ -130,7 +163,7 @@ export default {
   background-color:#CBF1E4;
   width: 150px;
 }
-#contact{
+#background{
   background-color: #fff;
 }
 #svg-github,#svg-linkedin, #svg-stackoverflow{
@@ -165,6 +198,9 @@ export default {
 .dark-bg{
   background: #F5F7FA;
 }
+.light-bg{
+  background: #cbf1e4;
+}
 .full-height{
   height: 100%;
 }
@@ -195,10 +231,16 @@ export default {
 .clear{
   clear: both;
 }
-.center-vertically{
+.center-vertically, .center-vertically-and-horizontally{
   display: flex;
   flex-direction: column;
+}
+.center-vertically{
   justify-content: center;
+}
+.center-vertically-and-horizontally{
+  justify-content: center;
+  align-items: center;
 }
 .title{
   font-size: 64px;
@@ -209,6 +251,10 @@ export default {
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 20px;
+}
+.big-title{
+  font-size: 50px;
+  font-weight: bold;
 }
 .info{
   margin: 0 auto;
@@ -229,9 +275,7 @@ export default {
 }
 .td-head{
   padding-left: 80px;
-}
-table>tr>td{
-  text-align: left;
+  vertical-align: top;
 }
 .td-title{
   font-weight: bold;
@@ -244,6 +288,37 @@ table>tr>td{
 }
 .td-row-wrapper{
   margin-bottom: 40px;
+}
+.download{
+  font-size: 17px;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 80px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.cv-table{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.cv-table > tr > td{
+  text-align: left;
+}
+.cv-table > td {
+  padding-bottom: 100px;
+}
+.cv-table > tr:last-child > td{
+  padding-bottom: unset;
+}
+.contact-table{
+  text-align: left;
+}
+.contact-table > tr:first-child > th {
+  padding-bottom: 20px;
+}
+.contact-table > tr > td:first-child, .contact-table > tr > th:first-child{
+  padding-right: 100px;
 }
 
 @media only screen and (max-width: 768px) {

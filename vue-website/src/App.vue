@@ -42,8 +42,13 @@ ul{
   padding: 0;
   list-style-type: none;
 }
+a{
+  /* color: rgb(44, 62, 80); */
+  color: #565594;
+}
 a:hover{
   cursor: pointer;
+  color: orange;
 }
 *:before,
 *:after {
