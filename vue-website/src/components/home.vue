@@ -115,23 +115,21 @@
       <div class="full-height small-width left center-vertically">
         <div class="big-title">Let's get in touch.</div>
       </div>
-      <div class="full-height large-width right center-vertically-and-horizontally">
-        <table class="contact-table">
-          <tr>
-            <th class="medium-title">― Socials</th>
-            <th class="medium-title">― Contact details</th>
-          </tr>
-          <tr>
-            <td><a href="https://github.com/axellejamous" target="_blank">LinkedIn</a></td>
-            <td><a href="javascript:void(0);" @click="mailToMe()">Email</a></td>
-          </tr>
-          <tr>
-            <td><a href="https://www.linkedin.com/in/axelle-jamous/" target="_blank">GitHub</a></td>
-          </tr>
-          <tr>
-            <td><a href="https://stackoverflow.com/users/1780110/axelle?tab=profile" target="_blank">Stackoverflow</a></td>
-          </tr>
-        </table>
+      <div id="contact-details-wrapper" class="full-height large-width right center-vertically-and-horizontally">
+        <div class="contact-wrapper">
+          <div class="medium-title">― Socials</div>
+          <ul>
+            <li><a href="https://github.com/axellejamous" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/axelle-jamous/" target="_blank">GitHub</a></li>
+            <li><a href="https://stackoverflow.com/users/1780110/axelle?tab=profile" target="_blank">Stackoverflow</a></li>
+          </ul>
+        </div>
+        <div class="contact-wrapper">
+          <div class="medium-title">― Contact details</div>
+          <ul>
+            <li><a href="javascript:void(0);" @click="mailToMe()">Email</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="clear"></div>
@@ -233,12 +231,13 @@ export default {
 }
 .center-vertically, .center-vertically-and-horizontally{
   display: flex;
-  flex-direction: column;
 }
 .center-vertically{
   justify-content: center;
+  flex-direction: column;
 }
 .center-vertically-and-horizontally{
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -311,14 +310,12 @@ export default {
 .cv-table > tr:last-child > td{
   padding-bottom: unset;
 }
-.contact-table{
+.contact-wrapper{
   text-align: left;
+  height: 110px;
 }
-.contact-table > tr:first-child > th {
-  padding-bottom: 20px;
-}
-.contact-table > tr > td:first-child, .contact-table > tr > th:first-child{
-  padding-right: 100px;
+#contact-details-wrapper > div:first-child{
+  margin-right: 100px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -330,14 +327,20 @@ export default {
     bottom: 10px;
   }
 
-  table{
+  .cv-table{
     margin-top: 10px;
   }
-  table>tr>td{
+  .cv-table>tr>td{
     padding-left: 20px;
     float: left;
   }
-
+  .contact-table>tr>td, .contact-table>tr>th{
+    width: 100%;
+    float: left;
+  }
+  .contact-table > tr > td:first-child, .contact-table > tr > th:first-child {
+    padding-right: unset;
+  }
   .page-half{
     height: 100vh;
   }
@@ -352,6 +355,21 @@ export default {
   }
   .td-head {
     padding-left: 20px;
+  }
+  .download{
+    padding-left: 20px;
+  }
+  .center-vertically-and-horizontally{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #contact-details-wrapper > div:first-child {
+    margin-right: unset;
+  }
+  .contact-wrapper {
+    height: unset;
+    margin-left: 30px;
+    margin-bottom: 50px;
   }
 }
 </style>
