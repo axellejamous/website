@@ -61,11 +61,10 @@
           <div class="medium-title">― Skills</div>
           <ul>
             <li>Problem solving</li>
-            <li>Communication</li>
-            <li>Teamwork</li>
             <li>Self motivation</li>
             <li>Decisiveness</li>
             <li>Adaptability</li>
+            <li>Teamwork</li>
           </ul>
         </div>
       </div>
@@ -94,7 +93,7 @@
               <div class="td-row-wrapper">
                 <div class="td-title">IoT Development intern</div>
                 <div class="td-subtitle">BASF  / Sept 2018 - Feb 2019</div>
-                <div>I was very lucky to work with an experienced IoT developer and Proximus to help develop a MvP for a large scale project within the BASF 4.0 integration.</div>
+                <div>I very lucky to work with an experienced IoT developer and Proximus to help develop a MvP for a large scale project within the BASF 4.0 integration.</div>
               </div>
             </td>
           </tr>
@@ -108,7 +107,7 @@
             </td>
           </tr>
         </table>
-        <a href="../assets/cv.pdf" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
+        <a href="/cv.pdf" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
       </div>
     </div>
     <div id="contact" class="page-half light-bg">
@@ -119,8 +118,8 @@
         <div class="contact-wrapper">
           <div class="medium-title">― Socials</div>
           <ul>
-            <li><a href="https://github.com/axellejamous" target="_blank">LinkedIn</a></li>
-            <li><a href="https://www.linkedin.com/in/axelle-jamous/" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/axelle-jamous/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/axellejamous" target="_blank">GitHub</a></li>
             <li><a href="https://stackoverflow.com/users/1780110/axelle?tab=profile" target="_blank">Stackoverflow</a></li>
           </ul>
         </div>
@@ -359,17 +358,29 @@ export default {
   .download{
     padding-left: 20px;
   }
-  .center-vertically-and-horizontally{
-    flex-direction: column;
-    align-items: flex-start;
-  }
   #contact-details-wrapper > div:first-child {
     margin-right: unset;
   }
   .contact-wrapper {
-    height: unset;
     margin-left: 30px;
     margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: portrait){
+  .center-vertically-and-horizontally{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-wrapper {
+    height: unset;
+  }
+}
+@media only screen and (max-width: 768px) and (orientation: landscape){
+  .page {
+    height: 150vh;
+  }
+  #svg-github, #svg-linkedin, #svg-stackoverflow {
+    bottom: -175px;
   }
 }
 </style>
