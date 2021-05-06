@@ -107,7 +107,7 @@
             </td>
           </tr>
         </table>
-        <a href="/cv.pdf" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
+        <a href="@/assets/cv.pdf" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
       </div>
     </div>
     <div id="contact" class="page-half light-bg">
@@ -367,12 +367,18 @@ export default {
   }
 }
 @media only screen and (max-width: 768px) and (orientation: portrait){
+  .page-half{
+    height: 75vh;
+  }
   .center-vertically-and-horizontally{
     flex-direction: column;
     align-items: flex-start;
   }
   .contact-wrapper {
     height: unset;
+  }
+  .info{
+    padding-top: 40px;
   }
 }
 @media only screen and (max-width: 768px) and (orientation: landscape){

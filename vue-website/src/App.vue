@@ -11,6 +11,9 @@ export default {
   name: 'App',
   components: {
     home
+  },
+  created(){
+    console.log("b" + "a" + +"a" + "a");
   }
 }
 </script>

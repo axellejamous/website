@@ -60,19 +60,17 @@ export default {
         jar.updateCode(`import {CodeJar} from '@medv/codejar';
 import Prism from 'prismjs';
 
-const editor = document.querySelector('#editor');
-const jar = new CodeJar(editor, Prism.highlightElement, {tab: '\\t'});
+var title = document.getElementById('#title');
+title.innerHTML = "Hi, I'm Axelle Jamous, a Software Developer";
 
-// Update code
-jar.updateCode('let foo = bar');
+var hiddenField = document.getElementById('#hiddenInputField');
+hiddenField.innerHTML = "Welcome to my website. Feel free to contact me if you have any questions!"
 
-// Get code
-let code = jar.toString();
+const jar = new CodeJar(editor, Prism.highlightElement, {tab: '\t'});
+//jar.updateCode('this cute little editor was made by antonmedv on GitHub');
 
-// Listen to updates
-jar.onUpdate(code => {
-  console.log(code);
-});
+//Check the console :)
+console.log("b" + "a" + +"a" + "a");
         `);
         jar.updateOptions({ tab: "  " });
     },
@@ -84,12 +82,12 @@ jar.onUpdate(code => {
 }
 
 function greeter(person: Person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
+    return "Hi, I'm " + person.firstName + " " + person.lastName + ", a Software Developer";
 }
 
 let user = {
-    firstName: "Jane",
-    lastName: "User"
+    firstName: "Axelle",
+    lastName: "Jamous"
 };
 
 document.body.textContent = greeter(user);`);
@@ -98,19 +96,18 @@ document.body.textContent = greeter(user);`);
     function () {
         editor.className = "editor language-html";
         jar.updateCode(`<!doctype html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
+    <title>Axelle's website</title>
 
-  <title>CodeJar</title>
-
-  <meta name="author" content="Anton Medvedev">
-  <meta name="description" content="Micro Code Editor">
-</head>
-<body>
-  <h1>CodeJar — Micro Code Editor</h1>
-</body>
+    <meta name="author" content="Axelle Jamous">
+    <meta name="author-codejar" content="Anton Medvedev">
+  </head>
+  <body>
+    <div id="title" class="bold title margin-left">Hi, I'm Axelle Jamous, a Software Developer</div>
+    <button id="email-button" class="margin-left" @click="mailToMe()">Email me</button>
+  </body>
 </html>`);
         jar.updateOptions({ tab: "  " });
     }
