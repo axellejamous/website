@@ -343,8 +343,7 @@ export default {
   margin-right: 100px;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+@media only screen and (max-width: 896px) {
   #codejar-wrapper{
     height: 40%;
   }
@@ -389,7 +388,7 @@ export default {
     margin-bottom: 50px;
   }
 }
-@media only screen and (max-width: 768px) and (orientation: portrait){
+@media only screen and (max-width: 896px) and (orientation: portrait){
   .page-half{
     height: 75vh;
   }
@@ -407,12 +406,12 @@ export default {
     margin-left: unset;
   }
 }
-@media only screen and (max-width: 768px) and (orientation: landscape){
+@media only screen and (max-width: 896px) and (orientation: landscape){
+  .half-width, .large-width, .small-width, .larger-width, .smaller-width{
+    width: 100%;
+  }
   .page {
     height: 150vh;
-  }
-  .icons {
-    bottom: -175px;
   }
 }
 </style>
