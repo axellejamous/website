@@ -381,9 +381,6 @@ export default {
   .td-head {
     padding-left: 20px;
   }
-  .download{
-    padding-left: 20px;
-  }
   #contact-details-wrapper > div:first-child {
     margin-right: unset;
   }
