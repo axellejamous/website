@@ -46,8 +46,7 @@ ul{
   list-style-type: none;
 }
 a{
-  /* color: rgb(44, 62, 80); */
-  color: #565594;
+  color: rgb(44, 62, 80);
 }
 a:hover{
   cursor: pointer;

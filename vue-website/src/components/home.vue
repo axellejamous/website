@@ -4,7 +4,7 @@
       <div class="full-height large-width left center-vertically">
         <div id="title" class="bold title margin-left">Hi, I'm Axelle Jamous, a Software Developer</div>
         <button id="email-button" class="margin-left" @click="mailToMe()">Email me</button>
-        <div>
+        <div class="icons">
           <a id="svg-github" href="https://github.com/axellejamous" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 250" version="1.1" preserveAspectRatio="xMidYMid">
               <g>
@@ -107,7 +107,18 @@
             </td>
           </tr>
         </table>
-        <a href="@/assets/cv.pdf" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
+        <div>
+          <div id="cv-download-wrapper">
+            <lord-icon
+                src="https://cdn.lordicon.com//nocovwne.json"
+                trigger="hover"
+                colors="primary:#121331,secondary:#08a88a"
+                id="lordicon">
+            </lord-icon>
+            <a :href="`${publicPath}cv.pdf`" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
+            <div class="clear"></div>
+          </div>
+        </div>
       </div>
     </div>
     <div id="contact" class="page-half light-bg">
@@ -141,6 +152,11 @@ import codejar from "@/components/codejar.vue";
 export default {
   components: { codejar },
   name: 'home',
+  data () {
+    return {
+      publicPath: process.env.BASE_URL
+    }
+  },
   methods: {
     mailToMe: function () {
       location.href = "mailto:axellejamous@hotmail.com?subject=Found your website";
@@ -163,18 +179,8 @@ export default {
 #background{
   background-color: #fff;
 }
-#svg-github,#svg-linkedin, #svg-stackoverflow{
-  position: absolute;
-  bottom: 100px;
-}
-#svg-github{
-  left: 30px;
-}
-#svg-linkedin{
-  left: 90px;
-}
-#svg-stackoverflow{
-  left: 150px;
+#svg-linkedin, #svg-stackoverflow{
+  margin-left: 30px;
 }
 #svg-linkedin-innerpath{
   fill: #fff;
@@ -182,7 +188,26 @@ export default {
 #svg-stackoverflow polygon{
   fill: rgb(44, 62, 80);
 }
+#cv-download-wrapper{
+  margin-left: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+#lordicon{
+  width:50px;
+  height:50px;
+  float: left;
+}
+#lordicon:hover{
+  cursor: pointer;
+}
 
+.icons{
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+}
 .wrapper{
   width: 100%;
 }
@@ -290,11 +315,9 @@ export default {
 .download{
   font-size: 17px;
   text-transform: uppercase;
-  text-align: left;
-  padding-left: 80px;
-  margin-bottom: 20px;
   letter-spacing: 1px;
   font-weight: bold;
+  float: left;
 }
 .cv-table{
   margin-top: 100px;
@@ -322,10 +345,10 @@ export default {
   #codejar-wrapper{
     height: 40%;
   }
-  #svg-github,#svg-linkedin, #svg-stackoverflow{
+
+  .icons{
     bottom: 10px;
   }
-
   .cv-table{
     margin-top: 10px;
   }
@@ -385,7 +408,7 @@ export default {
   .page {
     height: 150vh;
   }
-  #svg-github, #svg-linkedin, #svg-stackoverflow {
+  .icons {
     bottom: -175px;
   }
 }
