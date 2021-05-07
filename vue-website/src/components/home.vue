@@ -166,6 +166,9 @@ export default {
 </script>
 
 <style>
+#about-me{
+  position: relative;
+}
 #about-me #title{
   text-align: left;
 }
@@ -402,6 +405,9 @@ export default {
   }
   .info{
     padding-top: 40px;
+  }
+  #cv-download-wrapper {
+    margin-left: unset;
   }
 }
 @media only screen and (max-width: 768px) and (orientation: landscape){
