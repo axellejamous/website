@@ -111,7 +111,7 @@
           <div id="cv-download-wrapper">
             <lord-icon
                 src="https://cdn.lordicon.com//nocovwne.json"
-                trigger="hover"
+                trigger="loop"
                 colors="primary:#121331,secondary:#08a88a"
                 id="lordicon">
             </lord-icon>
