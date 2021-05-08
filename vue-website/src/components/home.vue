@@ -347,6 +347,9 @@ export default {
   #codejar-wrapper{
     height: 40%;
   }
+  #contact-details-wrapper > div:first-child {
+    margin-right: unset;
+  }
 
   .icons{
     bottom: 10px;
@@ -380,15 +383,19 @@ export default {
   .td-head {
     padding-left: 20px;
   }
-  #contact-details-wrapper > div:first-child {
-    margin-right: unset;
-  }
   .contact-wrapper {
     margin-left: 30px;
     margin-bottom: 50px;
   }
 }
 @media only screen and (max-width: 896px) and (orientation: portrait){
+  #cv-download-wrapper {
+    margin-left: unset;
+  }
+  #contact{
+    height: 50vh;
+  }
+
   .page-half{
     height: 75vh;
   }
@@ -402,8 +409,10 @@ export default {
   .info{
     padding-top: 40px;
   }
-  #cv-download-wrapper {
-    margin-left: unset;
+  .big-title {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 45px;
   }
 }
 @media only screen and (max-width: 896px) and (orientation: landscape){
