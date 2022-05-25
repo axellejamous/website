@@ -62,7 +62,7 @@
           <ul>
             <li>Problem solving</li>
             <li>Self motivation</li>
-            <li>Decisiveness</li>
+            <li>Self-critical</li>
             <li>Adaptability</li>
             <li>Teamwork</li>
           </ul>
@@ -73,16 +73,21 @@
       <div class="full-height center-vertically">
         <table class="cv-table">
           <tr>
-            <td class="medium-title smaller-width td-head">― Work experience</td>
+            <td class="medium-title smaller-width td-head">― Relevant work experience</td>
             <td class="larger-width">
               <div class="td-row-wrapper">
+                <div class="td-title">Medior Software Developer</div>
+                <div class="td-subtitle">Soluz.io  / December 2021 - Present</div>
+                <div>As a full-stack developer, my focus is on building exactly what our client wants, using our existing Software as a base. I also help build connections for existing ERP Software into our environment.</div>
+              </div>
+              <div class="td-row-wrapper">
                 <div class="td-title">Software Developer Consultant</div>
-                <div class="td-subtitle">Soluz.io  / Sept 2020 - Present</div>
-                <div>I have been working on the integration of modern ERP systems into the Soluz.io platform as well as end-to-end, fully custom, software applications built on top of the Soluz.io platform.</div>
+                <div class="td-subtitle">Soluz.io  / Sept 2020 - December 2021</div>
+                <div>I worked on the integration of modern ERP systems into the Soluz.io platform as well as end-to-end, fully custom, software applications built on top of the Soluz.io platform. One of the projects I worked on during my time as a consultant was the KBC Adviceshop, a fully custom integration within KBC mobile for Business, for which I was the main developer.</div>
               </div>
               <div class="td-row-wrapper">
                 <div class="td-title">Software Developer / Business Solution Expert</div>
-                <div class="td-subtitle">Arco Information  / May 2019 - Present</div>
+                <div class="td-subtitle">Arco Information  / May 2019 - December 2021</div>
                 <div>I’ve been central to delivering two IoT MvP's as well as an end-to-end web application in the online marketplace space, both built on top of Arco Information's existing software platform.</div>
               </div>
               <div class="td-row-wrapper">
@@ -110,10 +115,10 @@
         <div>
           <div id="cv-download-wrapper">
             <lord-icon
-                src="https://cdn.lordicon.com//nocovwne.json"
+                src="https://cdn.lordicon.com/nocovwne.json"
                 trigger="loop"
-                colors="primary:#121331,secondary:#08a88a"
-                id="lordicon">
+                colors="primary:#121331,secondary:#cbf1e4"
+                style="width:50px;height:50px">
             </lord-icon>
             <a :href="`${publicPath}cv.pdf`" download="cv_AxelleJamous.pdf" target="_blank" class="download">Download full CV</a>
             <div class="clear"></div>
