@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
+    "pages-deploy": "git subtree push --prefix vue-website/dist origin gh-pages"
   },
   "dependencies": {
     "codejar": "^3.4.0",
